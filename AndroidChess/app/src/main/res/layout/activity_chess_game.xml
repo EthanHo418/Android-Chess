@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    tools:context=".ChessGameActivity">
+
+    <TableLayout
+        android:id="@+id/chess_board"
+        android:layout_width="354dp"
+        android:layout_height="335dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_title"></TableLayout>
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="24dp"
+        android:text="Chess Game!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ai_move_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="AI move"
+        app:layout_constraintStart_toEndOf="@+id/resign_button"
+        app:layout_constraintTop_toBottomOf="@+id/game_status_text_view" />
+
+    <Button
+        android:id="@+id/draw_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
+        android:text="draw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_status_text_view" />
+
+    <Button
+        android:id="@+id/resign_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="resign"
+        app:layout_constraintStart_toEndOf="@+id/draw_button"
+        app:layout_constraintTop_toBottomOf="@+id/game_status_text_view" />
+
+    <Button
+        android:id="@+id/undo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="8dp"
+        android:text="Undo"
+        app:layout_constraintStart_toEndOf="@+id/game_status_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/chess_board" />
+
+    <TextView
+        android:id="@+id/game_status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chess_board" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

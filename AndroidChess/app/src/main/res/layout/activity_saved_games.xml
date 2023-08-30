@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenActivity">
+
+    <Button
+        android:id="@+id/saved_games_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="4dp"
+        android:text="Back to main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/game_list"
+        android:layout_width="match_parent"
+        android:layout_height="401dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/saved_games_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sort_name_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort byName"
+        app:layout_constraintBottom_toTopOf="@+id/saved_games_button"
+        app:layout_constraintEnd_toStartOf="@+id/sort_date_button"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/game_list"
+        app:layout_constraintTop_toBottomOf="@+id/game_list"
+        app:layout_constraintVertical_bias="0.802" />
+
+    <Button
+        android:id="@+id/sort_date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="Sort by Date"
+        app:layout_constraintBottom_toTopOf="@+id/saved_games_button"
+        app:layout_constraintEnd_toEndOf="@+id/game_list"
+        app:layout_constraintTop_toBottomOf="@+id/game_list"
+        app:layout_constraintVertical_bias="0.802" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
